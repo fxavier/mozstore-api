@@ -28,7 +28,7 @@ PRIMARY KEY(image_id)
 );
 
 CREATE TABLE color(
-cor_id BIGSERIAL NOT NULL,
+color_id BIGSERIAL NOT NULL,
 color_name VARCHAR(100),
 color_hexadesignation VARCHAR(250),
 PRIMARY KEY(color_id)
@@ -61,7 +61,7 @@ price NUMERIC(19, 2) NOT NULL DEFAULT 0,
 subcategory_id BIGINT,
 PRIMARY KEY(product_id),
 CONSTRAINT fk_product_subcategory
-  FOREIGN KEY(subcategory) REFERENCES subcategory(subcategory_id)
+  FOREIGN KEY(subcategory_id) REFERENCES subcategory(subcategory_id)
 );
 
 CREATE TABLE product_detail(
